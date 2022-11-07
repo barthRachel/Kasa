@@ -1,42 +1,35 @@
+/* Composant Header - la tête de page qui contient la navigation de l'application */
+import './header.css';
 import { Link } from 'react-router-dom';
-import React from 'react';
+import React, { useState }  from 'react';
 import logo from '../../images/D_logo.png';
-import styled from 'styled-components';
 
-const HeaderDiv = styled.div`
-    margin : 40px 100px 0px 100px;
-    display : flex;
-    justify-content : space-between;
-    align-items : center;
-`
 
-const HeaderNav = styled.nav`
-
-`
-
-const StyledLink = styled(Link)`
-    text-decoration : none;
-    font-size : 24px;
-    margin-left : 60px;
-    color : #FF6060;
-
-    &:hover{
-        text-decoration : underline;
-    }
-
-`
 
 function Header() {
+
+    const urls = ["/", "/about"]
+    const [inWhichUrl, setUrl] = useState(urls[0]);
+
+    const changeIsHome = () => {
+        setUrl(urls[0]);
+    }
+
+    const changeIsAbout = () => {
+        setUrl(urls[1]);
+    }
+
     return (
-        <HeaderDiv>
-            <p>
+        <div className='headerDiv'>
+            <Link to="/" onClick={changeIsHome}>
                 <img src={logo} alt="Logo Kasa" />
-            </p>
-            <HeaderNav>
-                <StyledLink to="/">Accueil</StyledLink>
-                <StyledLink to="/about">A Propos</StyledLink>
-            </HeaderNav>
-        </HeaderDiv>
+            </Link>
+            <nav>
+                <Link to="/" className={(inWhichUrl === "/" ? "navigationOn" : "navigationLink") + " primary"} onClick={changeIsHome} /*className='navigationLink primary'*/>Accueil</Link>
+                <Link to="/about" className={(inWhichUrl === "/about" ? "navigationOn" : "navigationLink") + " primary"} onClick={changeIsAbout} /*className='navigationLink primary'*/>A Propos</Link>
+            </nav>
+
+        </div>
     )
 }
 

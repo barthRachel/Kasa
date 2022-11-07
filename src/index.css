@@ -1,16 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-/*body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  font-family : 'Montserrat';
+  box-sizing : border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  margin : 0;
+  padding : 0;
 }
-*/
+
+/* CSS liés aux couleurs */
+
+.primary {
+  color : #FF6060;
+}
+
+.primaryBackground{
+  background-color: #FF6060;
+}
+
+.secondary {
+  background-color: #F6F6F6;
+}
+
+/* Factorisation de style sur pages Home & About */
+/* Desktop */
+.divBoxPages{
+  margin: 50px 100px 50px 100px;
+  border: 2px solid red;
+}
+
+/* Mobile*/
+@media(width < 768px){ 
+
+  .divBoxPages{
+    margin: 30px 20px 30px 20px;
+    border: 2px solid red;
+  }
+}

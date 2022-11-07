@@ -1,0 +1,11 @@
+/* Desktop */
+.aboutCollapse{
+    margin: 35px 105px 0px 105px;
+}
+
+/* Mobile */
+@media(width < 768px ){
+    .aboutCollapse{
+        margin: 20px 0 0 0;
+    }
+}

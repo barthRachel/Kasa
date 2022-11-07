@@ -1,0 +1,56 @@
+/* Desktop */
+.cardDiv {
+    display : flex;
+    flex-direction : column;
+    justify-content: flex-end;
+    width : 30%;
+    max-height : 325px;
+    margin-bottom : 50px;
+    border-radius : 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.cardImg{
+    height : 100%;
+    width : 100%;
+    border-radius : 10px;
+    position :relative;
+    object-fit : cover;
+    z-index: 0;
+}
+
+.cardSpan{
+    height: 325px;
+    width: 480px;
+    font-size : 18px;
+    font-weight : bold;
+    background: linear-gradient(rgba(255,255,255,0), rgba(0,0,0,0.5) 70%);
+    padding : 20px 10px 20px 10px;
+    border-radius : 10px;
+    position : absolute;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Mobiole*/
+@media(width < 768px) {
+
+    .cardDiv {
+        width : 100%;
+        height: 450px;
+        max-height : 450px;
+        margin-bottom : 25px;
+    }    
+
+    .cardSpan{
+        max-width: 723px;
+        max-height: 450px;
+        width: 100%;
+        height: 100%;  
+    }
+}

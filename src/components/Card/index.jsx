@@ -1,47 +1,23 @@
+/* Composant Card qui affiche un la photo et le titre d'un logement sous forme de carte */
+import './card.css';
 import React from 'react';
 import propTypes from 'prop-types';
-import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-const CardDiv = styled.div`
-    border : 2px solid blue;
-    display : flex;
-    flex-direction : column;
-    //align-items : center;
-    width : 30%;
-    height : 30%;
-    margin-bottom : 50px;
-    border-radius : 10px;
-`
 
-const CardImg = styled.img`
-    height : 100%;
-    width : 100%;
-    border-radius : 10px;
-    object-fit: cover;
-`
-
-const CardSpan = styled.span`
-    display : block;
-    background-color : red;
-    //width : 100%;
-    //margin : 0px 20px 0px 20px;
-    padding-left : 20px;
-    postion : absolute;
-    left: 0; right : 0; bottom : 0;
-`
-
-function Card({ title, cover }) {
+function Card({ title, cover, id }) {
     return (
-        <CardDiv>
-            <CardImg src={cover} alt="freelance" />
-            <CardSpan>{title}</CardSpan>
-        </CardDiv>
+        <Link to={'/rental/' + id} className='cardDiv' data-id={id} >
+            <img className='cardImg' src={cover} alt={`${title} cover`} />
+            <span className='cardSpan'>{title}</span>
+        </Link>
     )
 }
 
 Card.propTypes = {
     title : propTypes.string.isRequired,
     cover : propTypes.string.isRequired,
+    id : propTypes.string.isRequired,
 }
 
 Card.defaultProps = {
