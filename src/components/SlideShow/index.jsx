@@ -8,6 +8,7 @@ function Slideshow({ pictureList }) {
 
     const lenghtPictureList = pictureList.length;
     let styleDisplay;
+    let widthPicture;
     
     /*var isMobile = false;
 
@@ -17,6 +18,7 @@ function Slideshow({ pictureList }) {
     
     //si le logement n'a qu'une seule image les chevrons et le numéro de photo ne s'affichent pas
     lenghtPictureList === 1 ? styleDisplay = "none" : styleDisplay = "flex";
+    lenghtPictureList === 1 ? widthPicture = "1400px" : widthPicture = "100%"
 
     let [index, setIndex] = useState(0);
 
@@ -44,7 +46,7 @@ function Slideshow({ pictureList }) {
                         className="slideShowImg"
                         key={`${infos[index]}-${index}`}
                     > 
-                        <img src={pictureList[index]} alt="Slideshow Rental"/>
+                        <img src={pictureList[index]} alt="Slideshow Rental" style={{width : widthPicture}}/>
 
                         <div className='number' style={{display : styleDisplay}}>
                             {index+1 + " / " + lenghtPictureList}
