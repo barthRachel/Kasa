@@ -1,0 +1,125 @@
+/* Desktop */
+.rentalSheetDivBox{
+    margin: 30px 100px 30px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rentalSheetInfosBox{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin : 30px 0 30px 0;
+}
+
+.rentalSheetDescriptionBoxTitles{
+    width: 100%;
+
+}
+
+.rentalSheetDescriptionBoxTitles > h1{
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+}
+
+.rentalSheetDescriptionBoxTitles > h2{
+    margin: 0 0 20px 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.rentalSheetTagLists{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rentalSheetTagLists > li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding: 0px 15px 0px 15px ;
+    border-radius: 10px;
+    min-width: 115px;
+    height: 30px;
+    font-size: 14px;
+    color: white;
+}
+
+.rentalSheetHostBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rentalSheetHostName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rentalSheetHostName > p{
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.rentalSheetHostName > img{
+    border-radius: 50%;
+    width: 74px;
+    height: 74px;
+}
+
+.rentalSheetCollapseBox{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.rentalSheetCollapseDesc, .rentalSheetCollapseEquipements{
+    flex: 1;
+}
+
+.rentalSheetCollapseDesc{
+    margin-right: 46px;
+}
+
+.rentalSheetCollapseEquipements{
+    margin-left: 46px;
+}
+
+.equipementsList{
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Mobile */
+@media(width < 768px){ 
+
+    .rentalSheetDivBox{
+        margin: 30px 20px 30px 20px;
+    }
+
+    .rentalSheetInfosBox{
+        flex-direction: column;
+    }
+
+    .rentalSheetHostBox{
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .rentalSheetCollapseBox{
+        flex-direction: column;
+    }
+
+    .rentalSheetCollapseDesc, .rentalSheetCollapseEquipements{
+        margin: 0;
+    }
+    
+
+}

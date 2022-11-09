@@ -1,0 +1,34 @@
+/* Desktop */
+.divBox{
+    width : 100%;
+    height : 550px;
+    margin : 70px 0 70px 0;
+    padding : 0;
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    justify-content : space-around;
+}
+
+.divBox > div {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-height: 500px;
+}
+
+.errorLink{
+    font-size : 18px;
+    margin-top : 75px;
+}
+
+/* Mobile */
+@media(width < 768px){
+    .divBox > div {
+        max-width: 85%;
+
+    }
+}

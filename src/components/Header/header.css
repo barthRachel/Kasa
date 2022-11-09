@@ -1,0 +1,36 @@
+/* Desktop */
+.headerDiv {
+    margin : 40px 100px 0px 100px;
+    display : flex;
+    justify-content : space-between;
+    align-items : center;
+}
+
+.navigationLink {
+    text-decoration : none;
+    font-size : 24px;
+    margin-left : 60px;
+}
+
+.navigationOn {
+    text-decoration: underline;
+    font-size: 24px;
+    margin-left: 60px;
+}
+
+.navigationLink:hover {
+    text-decoration : underline;
+}
+
+/* Mobile */
+@media(width < 768px){
+    .headerDiv {
+        margin : 20px 20px 0px 20px;
+    }
+    
+
+    .navigationLink, .navigationOn {
+        font-size : 18px;
+    }
+}
+
