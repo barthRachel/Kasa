@@ -15,6 +15,7 @@
 }
   
 .slideshowSlider {
+    width: 100%;
     white-space: nowrap;
     transition: ease 1000ms;
 }
@@ -65,7 +66,6 @@
     justify-content: center;
     margin: 0;
     padding: 0;
-    font-size: 50px;
 }
 
 .previous:hover, .next:hover{
@@ -75,7 +75,7 @@
 /* Mobile */
 @media(width < 768px){
     .previous, .next{
-        font-size: 20px;
+        width: 12px;
     }
 
     .number{

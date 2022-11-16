@@ -16,16 +16,10 @@
     font-size: 34px;
 }
 
-.buttonUpDown{
-    color: white;
-    font-size: 30px;
-}
-
 .buttonUpDown:hover{
     cursor: pointer;
 }
 
-    
 .content-parent {
     border-radius: 0px 0px 5px 5px;
     height: 0px;

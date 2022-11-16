@@ -1,24 +1,18 @@
 /* Composant SlideShow qui affiche le carroussel d'image disponible pour le logement sur lequel on a cliqué */
 import './slideshow.css';
 import React, { useState } from 'react';
-import {FaChevronLeft, FaChevronRight} from 'react-icons/fa';
+import chevronLeft from '../../images/ChevronLeft.png';
+import chevronRight from '../../images/ChevronRight.png';
 
 
 function Slideshow({ pictureList }) {
 
     const lenghtPictureList = pictureList.length;
     let styleDisplay;
-    let widthPicture;
-    
-    /*var isMobile = false;
 
-    if(window.innerWidth < 768){
-        isMobile = true;
-    }*/
     
     //si le logement n'a qu'une seule image les chevrons et le numéro de photo ne s'affichent pas
     lenghtPictureList === 1 ? styleDisplay = "none" : styleDisplay = "flex";
-    lenghtPictureList === 1 ? widthPicture = "1400px" : widthPicture = "100%"
 
     let [index, setIndex] = useState(0);
 
@@ -46,7 +40,7 @@ function Slideshow({ pictureList }) {
                         className="slideShowImg"
                         key={`${infos[index]}-${index}`}
                     > 
-                        <img src={pictureList[index]} alt="Slideshow Rental" style={{width : widthPicture}}/>
+                        <img src={pictureList[index]} alt="Slideshow Rental" />
 
                         <div className='number' style={{display : styleDisplay}}>
                             {index+1 + " / " + lenghtPictureList}
@@ -57,8 +51,8 @@ function Slideshow({ pictureList }) {
             </div>
             
             <div className='changePicture' style={{display : styleDisplay}}  >
-              <p className='previous' onClick={chevronPrevious}> <FaChevronLeft /> </p>
-              <p className='next' onClick={chevronNext}> <FaChevronRight /> </p> 
+              <p className='previous' onClick={chevronPrevious}> <img src={chevronLeft} alt="Chevron left" /> </p>
+              <p className='next' onClick={chevronNext}> <img src={chevronRight} alt="Chevron right" /> </p> 
             </div>
         </div>
   );
