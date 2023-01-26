@@ -21,7 +21,7 @@ root.render(
     <Header/>
     
     <Routes>
-      <Route exact path='/panda-dev' element={<Home />} />
+      <Route exact path='/kasa' element={<Home />} />
 
       <Route path='/quote' element={<Quote />} />
 
